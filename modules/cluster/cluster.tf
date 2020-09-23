@@ -57,3 +57,12 @@ resource "azurerm_kubernetes_cluster" "aks-getting-started" {
 
 
 }
+resource "azurerm_kubernetes_cluster_node_pool" "monitoring" {
+        name = "monitoring"
+        kubernetes_cluster_id = azurerm_kubernetes_cluster.aks-getting-started.id
+        vm_size = "Standard_B2s"
+        node_count = 3
+        os_disk_size_gb = 250
+        os_type = "Linux"
+  
+}

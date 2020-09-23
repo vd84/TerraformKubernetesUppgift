@@ -6,10 +6,10 @@ variable "serviceprinciple_key" {
 }
 
 variable "location" {
-    default = "europewest"
+    default = "westeurope"
 }
 variable "kubernetes_version" {
-    default = "1.16.10"
+    default = "1.17.9"
 }
 
 variable "ssh_key" {
